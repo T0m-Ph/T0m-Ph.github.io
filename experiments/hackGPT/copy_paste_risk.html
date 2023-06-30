@@ -1,0 +1,11 @@
+<html>
+    <p id="copy">This looks like a benign piece of text </p>
+    <br/><br/>
+    <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="But try and copy paste it here"></textarea>
+    <script>
+          document.getElementById('copy').addEventListener('copy', function(e) {
+              e.clipboardData.setData('text/plain', 'Not really what you expected huh?')
+              e.preventDefault();
+          });
+      </script>
+</html>
